@@ -1,0 +1,19 @@
+#Append to the nextjs config.
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',              // enables `next export`
+  images: { unoptimized: true }, // no Image Optimization server
+  // Remove/customize assetPrefix unless you truly need a CDN URL
+  assetPrefix: undefined,
+};
+module.exports = nextConfig;
+
+
+#Run:
+
+npm run build
+npx next export          # produces ./out
+npm i -D inline-source glob mime
+node inline-single-html.mjs
+
